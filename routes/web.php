@@ -24,6 +24,9 @@ Route::get('/animalsList', [FrontController::class, 'animalsList'])->name('anima
 Route::get('/create/animal', [AnimalController::class, 'create'])->name('create.animal');
 Route::post('/store/animal', [AnimalController::class, 'store'])->name('store.animal');
 
+// CURD - Delete
+Route::delete('/animal/{id}/delete', [AnimalController::class, 'destroy'])->name('destroy.animal');
+
 // CRUD - Show
 Route::get('/animal/{id}', [AnimalController::class, 'show'])->name('show.animal');
 

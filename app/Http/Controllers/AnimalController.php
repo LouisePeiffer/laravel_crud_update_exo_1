@@ -18,6 +18,11 @@ class AnimalController extends Controller
         $animal->save();
         return redirect()->route('home');
     }
+    // CRUD - Delete
+    public function destroy (Animal $id) {
+        $id->delete();
+        return redirect()->route('animalsList');
+    }
     // CRUD - Show
     public function show (Animal $id) {
         $animal = $id;
